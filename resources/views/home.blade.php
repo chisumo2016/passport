@@ -25,3 +25,45 @@
     </div>
 </div>
 @endsection
+
+@push('script')
+
+<script>
+    {{--VIEW ALL--}}
+//    axios.get('/oauth/clients')
+//        .then(response => {
+//        console.log(response.data);
+//    });
+
+    {{--POST--}}
+
+//    const data = {
+//            name: 'TEST 10',
+//            redirect: 'http://example.com/callback'
+//        };
+//
+//    axios.post('/oauth/clients', data)
+//        .then(response => {
+//        console.log(response.data);
+//    })
+//    .catch (response => {
+//        // List errors on response...
+//    });
+
+            {{--PUPDATE--}}
+
+    const data = {
+        name: 'TOKA',
+        redirect: 'http://example.com/callback'
+    };
+
+    axios.put('/oauth/clients/' + 7, data)
+        .then(response => {
+        console.log(response.data);
+    })
+    .catch (response => {
+        // List errors on response...
+    });
+</script>
+
+@endpush
